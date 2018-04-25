@@ -1,0 +1,17 @@
+<!--pages/class/visitor/map/map.wxml-->
+<text>这个页面用来常用工具</text>
+<button class='common' bindtap='map'>开始导航</button>
+<button class='common'>发起拼单</button>
+<button class='common'>常用工具</button>
+<button class='common'>订房信息</button>
+<!--
+<map
+        style="width: 100%; height: 300px;"
+        latitude="{{latitude}}"
+        longitude="{{longitude}}"
+        markers="{{markers}}"
+        covers="{{covers}}"
+        >
+      </map>
+-->
+

@@ -1,0 +1,6 @@
+<!--pages/class/visitor/order/order.wxml-->
+<text>这个页面用来常用工具</text>
+<button class='common'>查看地图</button>
+<button class='common'>发起拼单</button>
+<button class='common'>常用工具</button>
+<button class='common'>订房信息</button>

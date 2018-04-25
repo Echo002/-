@@ -1,0 +1,22 @@
+易游-旅游微信小程序的设计与实现
+
+经济全球化的背景下,信息化技术在旅游业中得到全方位应用和高速发展。我国旅游信息化的经济效益不能低估,但旅游信息化发展还处于初期阶段,学者们主要研究旅游信息化理论,旅游信息化实践方面研究资料较少。微信是近几年兴起受众广泛的网络平台,利用旅游微信公众平台作为旅游行业信息化评价标准是一种新趋势。为提高旅游服务水平，开发一款基于微信小程序的旅游服务系统。
+
+该系统包括景点语音讲解，游客定制电子围栏和紧急援救呼叫等功能。该系统是基于微信平台的H5轻应用，将系统底层功能（设备、位置、媒体、文件等）和微信自身功能（登录、支付、分享等）结合的小程序开发。 该系统可综合运用学生大学四年所学知识，加深学生对程序设计、软件工程、数据库技术等方面的理解，综合性强，集成度高，工作量适中，具有科学性和可行性。
+
+1：完成系统功能设计与实现； 
+2：完成后台管理程序设计与实现； 
+3：完成网络通讯程序的设计与实现，搭建网络调试环境； 
+4：完成必要的测试并撰写测试报告； 
+5：所有试验数据、程序、结果完备，算法流程清晰，并完成论文撰写。
+
+[1] 杨杰，基于微信公众平台校园服务公众号的设计与实现[D] 华中师范大学，2015
+[2] 李锦程. 基于微信平台的医疗就诊系统设计与实现[D] 哈尔滨工业大学，2015
+[3] 丁丽静. 基于微信公众平台的华文教师学习社区的设计与研究[D] 暨南大学, 2015.
+[4] 易伟.微信公众平台搭建与开发揭秘[M]. 机械工业出版社, 2015 
+[5] 刘捷.微信公众平台企业应用开发实战[M]. 电子工业出版社, 2015 
+[6] 方倍工作室,著.微信公众平台开发最佳实践[M]. 机械工业出版社, 2014
+[7] 闫小坤,周涛.微信公众平台开发基础与实战[M]. 机械工业出版社, 2014
+[8]Che Hui Lien,Yang Cao. Examining WeChat users’ motivations, trust, attitudes, and positive word-of-mouth: Evidence from China[J]. Computers in Human Behavior . 2014 
+[9]Cabral,Sheeri K. MySQL 5.5: Improving on the World’s Most Popular Open Source Database[J]. Database Trends and Applications . 2011 (3)
+[10]Yu-Liang Ting.Using Mobile Technologies to Create Interwoven Learning Interactions:An Intuitive Design and its Evaluation. Computers and Education . 2013

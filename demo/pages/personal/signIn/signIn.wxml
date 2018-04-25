@@ -1,0 +1,19 @@
+<!--pages/personal/signIn/signIn.wxml-->
+<view class="container">  
+  <view class="usermotto">  
+    <text class="user-motto">{{motto}}\n\n</text>
+    用户名：  
+    <input type="text" bindinput="userNameInput"/>  
+    密码：  
+    <input type="text" bindinput="userPasswordInput" password="true"/>
+    确认密码：  
+    <input type="text" bindinput="userPasswordInpuSure" password="true"/>  
+    
+    <radio-group class="radio-group" bindchange="radiochange">
+    <label class="radio" wx:for="{{items}}">
+    <radio value="{{item.name}}" checked="{{item.checked}}"/>{{item.value}}<br/>
+    </label>
+    </radio-group>
+    <button bindtap="logIn">确定</button>  
+  </view>  
+</view>  

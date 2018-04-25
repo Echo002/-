@@ -1,0 +1,17 @@
+<view class="main">  
+  <view class="usermotto">  
+    <text class="main_text">{{motto}}\n\n</text>
+    <br/><br/>
+    用户名：  
+    <input class="type" type="text" bindinput="userNameInput"/>  
+    密码：  
+    <input class="type" type="text" bindinput="userPasswordInput" password="true"/> 
+    <radio-group class="radio-group" bindchange="radiochange">
+    <label class="radio" wx:for="{{items}}">
+    <radio value="{{item.name}}" checked="{{item.checked}}"/>{{item.value}}<br/>
+    </label>
+    </radio-group>
+    <button bindtap="logIn">登录</button>  
+    <button bindtap="signIn">注册</button> 
+  </view>  
+</view>  
