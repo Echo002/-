@@ -1,6 +1,11 @@
-<!--pages/class/visitor/order/order.wxml-->
-<text>这个页面用来常用工具</text>
-<button class='common'>查看地图</button>
-<button class='common'>发起拼单</button>
-<button class='common'>常用工具</button>
-<button class='common'>订房信息</button>
+<!--语音画册界面-->
+<view class="container">
+  <view class="title">
+    <image class="huace" src="../../../../image/src/huace.png" background-size="contain"></image>
+  </view>
+  <view class="items">
+  	<view class="item" wx:key wx:for="{{list}}" bindtap="bindViewTap" data-id="{{item.id}}">
+  		<image class="item-cover" src="{{item.pic_url}}" background-size="contain"></image>
+  	</view>
+  </view>
+</view>

@@ -1,0 +1,66 @@
+.title{
+	position:relative;
+}
+.titbg{
+	width:268rpx;
+	height:120rpx;
+	margin:0 auto;
+	display:block;
+}
+.tit{
+	position:absolute;
+	width:348rpx;
+	height:40rpx;
+	top:60rpx;
+	left:50%;
+	margin-left:-174rpx;
+}
+.scene{
+	position:absolute;
+	width:348rpx;
+	height:40rpx;
+}
+.mo{
+	position:absolute;
+	width:54rpx;
+	height:54rpx;
+	right:10rpx;
+	top:-26rpx;
+}
+.items{
+	position:relative;
+	z-index:2;
+}
+.item-cover{
+	width:162rpx;
+	height:162rpx;
+	border-radius:50%;
+	display:block;
+	margin:0 auto 30rpx auto;
+}
+.audio{
+	position:relative
+}
+.a_btn{
+	width:36rpx;
+	height:36rpx;
+	position:absolute;
+	top:50%;
+	left:50%;
+	margin-left:-18rpx;
+	margin-top:-18rpx;
+	z-index:2;
+}
+.item{
+	width:50%;
+	float:left;
+	margin:30rpx 0 40rpx 0;
+}
+.item text{
+	width:100%;
+	display:block;
+	text-align:center;
+	font-size:28rpx;
+	height:2em;
+	overflow:hidden;
+}

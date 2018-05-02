@@ -1,66 +1,47 @@
-// pages/class/visitor/order/order.js
+//index.js
+//获取应用实例
+var app = getApp()
 Page({
-
-  /**
-   * 页面的初始数据
-   */
   data: {
-  
+    list: [],
+    userInfo: {}
   },
-
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
-  
+  //事件处理函数
+  bindViewTap: function (e) {
+    var id = e.currentTarget.dataset.id;
+    console.log(id);
+    wx.navigateTo({
+      url: '../order/scene/scene?id='+id
+    })
   },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
+  getSceneLists: function () {
+    var that = this;
+    wx.request({
+      url: "https://qcloud.bmy.com.cn/api/voices/classify",
+      success: function (data) {
+        console.log(data.data);
+        that.setData({
+          list: data.data
+        })
+      },
+      fail: function () {
+        wx.showLoading({
+          title: '数据加载错误，请刷新再试！'
+        })
+      }
+    });
+  },
+  onLoad: function () {
+    var that = this;
+    this.getSceneLists();
+    wx.showLoading({
+      title: '加载中'
+    })
+  },
   onReady: function () {
-  
-  },
+    setTimeout(function () {
+      wx.hideLoading();
+    }, 500)
 
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-  
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-  
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-  
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-  
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-  
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-  
   }
 })

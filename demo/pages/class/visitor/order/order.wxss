@@ -1,1 +1,22 @@
-/* pages/class/visitor/order/order.wxss */
+.item{
+	width:33%;
+	float:left;
+	margin:30rpx 0 60rpx 0;
+}
+.item text{
+	width:100%;
+	display:block;
+	text-align:center;
+	font-size:28rpx;
+}
+.item image{
+	width:180rpx;
+	height:186rpx;
+	display:block;
+	margin:0 auto;
+}
+.huace{
+	width:750rpx;
+	height:118rpx;
+	margin:0 auto;
+}

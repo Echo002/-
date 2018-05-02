@@ -1,1 +1,4 @@
 /* pages/class/visitor/tools/tools.wxss */
+.common{
+  width: 50px;
+}

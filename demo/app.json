@@ -7,7 +7,9 @@
     "pages/class/visitor/pay/pay",
     "pages/class/visitor/tools/tools",
     "pages/class/visitor/order/order",
-    "pages/class/visitor/map/map"
+    "pages/class/visitor/map/map",
+    "pages/class/visitor/order/scene/scene",
+    "pages/class/visitor/order/detail/detail"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -23,11 +25,15 @@
     "list": [
       {
         "pagePath": "pages/index/index",
-        "text": "首页"
+        "text": "首页",
+        "iconPath": "image/buttom1.png",
+        "selectedIconPath": "image/buttom1_p.png"
       },
       {
         "pagePath": "pages/personal/personal",
-        "text": "我的"
+        "text": "我的",
+        "iconPath": "image/buttom2.png",
+        "selectedIconPath": "image/buttom2_p.png"
       }
     ]
   }

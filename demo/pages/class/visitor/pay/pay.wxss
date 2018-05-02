@@ -1,1 +1,6 @@
 /* pages/class/visitor/map/pay.wxss */
+.common{
+  width: 50px;
+  margin-right: 10rpx;
+  float: absolute;
+}

@@ -26,5 +26,10 @@ Page({
         })
       }
     })
+  },
+  order: function (){
+    wx.navigateTo({
+      url: '../order/order',
+    })
   }
 })

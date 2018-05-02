@@ -1,0 +1,24 @@
+<view class="container">
+  <view class="title">
+    <image class="titbg" src="../../../../../image/src/titbg.png" background-size="cover"></image>
+    <view class="tit">
+    	<image class="scene" src="../../../../../image/src/{{titclass}}.png" background-size="cover"></image>
+    	<image class="mo" src="../../../../../image/src/mo.png" background-size="cover"></image>
+    </view>
+  </view>
+  <view class="items">
+  	<view class="item" wx:key wx:for="{{list}}">
+      <view class="audio" bindtap="bindViewTap" data-voice="{{item.voice}}" data-id="{{item.id}}">
+        <image class="item-cover" src="{{item.thumbnail}}" mod="aspectFill"></image>
+        <image class="a_btn" src="{{a_btn[item.id]?a_btn[item.id]:a_btn[0]}}" background-size="cover"></image>
+      </view>
+      <text bindtap="bindTextTap" data-id="{{item.id}}">{{item.name}}</text>
+  	</view>
+  </view>
+  <view>
+  	<image class="copyright" src="../../../../../image/src/copyright.png" background-size="contain"></image>
+  </view>
+  <view>
+    <audio src="{{detailInfo.voice}}" id="myAudio" bindended="audioEnd"></audio>
+  </view>
+</view>

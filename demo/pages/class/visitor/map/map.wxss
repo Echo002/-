@@ -1,1 +1,4 @@
 /* pages/class/visitor/map/map.wxss */
+#guide{
+  justify-content: center;
+}
