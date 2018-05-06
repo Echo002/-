@@ -16,9 +16,6 @@
   	</view>
   </view>
   <view>
-  	<image class="copyright" src="../../../../../image/src/copyright.png" background-size="contain"></image>
-  </view>
-  <view>
     <audio src="{{detailInfo.voice}}" id="myAudio" bindended="audioEnd"></audio>
   </view>
 </view>

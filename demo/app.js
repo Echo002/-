@@ -1,11 +1,29 @@
 //app.js
 App({
   onLaunch: function () {
+    var temp = []
+    wx.setStorage({
+      key: "mySelectCurs",
+      data: temp
+    }),
+
+    wx.setStorage({
+      key: "myMainCur",
+      data: {
+          "name": "CNY",
+          "country": "中国",
+          "rate": 0.0,
+          "amount": 100.0,
+          "en": "RMB",
+          "cn": "人民币",
+          "jp": "香港ドル",
+          "ko": "홍콩 달러"
+      }
+    })
     // 展示本地存储能力
     var logs = wx.getStorageSync('logs') || []
     logs.unshift(Date.now())
     wx.setStorageSync('logs', logs)
-
     // 登录
     wx.login({
       success: res => {
@@ -35,5 +53,5 @@ App({
   },
   globalData: {
     userInfo: null
-  }
+  },
 })

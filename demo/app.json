@@ -9,7 +9,8 @@
     "pages/class/visitor/order/order",
     "pages/class/visitor/map/map",
     "pages/class/visitor/order/scene/scene",
-    "pages/class/visitor/order/detail/detail"
+    "pages/class/visitor/order/detail/detail",
+    "pages/class/visitor/tools/addCur/addCur"
   ],
   "window": {
     "backgroundTextStyle": "light",

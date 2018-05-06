@@ -31,5 +31,10 @@ Page({
     wx.navigateTo({
       url: '../order/order',
     })
+  },
+  tools:function(){
+    wx.navigateTo({
+      url: '../tools/tools',
+    })
   }
 })

@@ -1,6 +1,55 @@
-<!--pages/class/visitor/tools/tools.wxml-->
-<text>这个页面用来常用工具</text>
-<button class='common'>查看地图</button>
-<button class='common'>发起拼单</button>
-<button class='common'>常用工具</button>
-<button class='common'>订房信息</button>
+<!--index.wxml-->
+<view class="container">
+    <view  bindtap="bindAddCur"  class="pageHead" >
+        <view class="userinfo" >
+            <text class="userinfo-nickname">欢迎您使用汇率转换：</text>
+        </view>
+          
+        <view class="addCur"  bindtap="bindAddCur">
+            <text>+</text>
+        </view>
+    </view>
+    <view class="cur_main" >
+            <view>
+                  <image src="../../../../image/id128/{{myMainCur.name}}.png" class="cur_logo" />
+            </view>
+            <view class="middle">
+                  <view  class="top">
+                        <view>
+                              <text>{{myMainCur.name}} {{myMainCur.cn}}</text>
+                        </view> 
+                        <view class="datetimeTxt">
+                              <text>{{curDate}}</text>
+                        </view>
+                  </view>           
+                  <view   class="amountInput">
+                        <input  bindinput="bindKeyInput"   placeholder="100" maxlength="180"  type="digit"  />
+                  </view>
+            </view>
+
+    </view>
+    <scroll-view scroll-y="true" style="height: 400px;" bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll"> 
+            <block wx:for="{{mySelectCurs}}"  wx:key=""  >
+                  <view class="item" bindlongtap="longtapFormSet" 
+                                        data-text="{{item.cn}}"
+                                        data-id="{{item.name}}"  >
+                        <view>
+                              <image src="../../../../image/id128/{{item.name}}.png" class="cur_logo" />
+                        </view>
+                        <view class="middle">
+                              <view>
+                                    <text>{{item.name}} {{item.cn}}</text>
+                              </view> 
+                              <view  class="rateTxt">
+                                    <text>{{item.amount}}</text>
+                              </view> 
+                        </view>
+
+                        <view class="right">
+                                     <text>1 {{myMainCur.name}}＝{{item.rate}} {{item.name}}</text>
+                        </view>
+
+                  </view>
+            </block>
+      </scroll-view>
+</view>

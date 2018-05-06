@@ -2,12 +2,12 @@
 <view class="container">  
   <view class="usermotto">  
     <text class="user-motto">{{motto}}\n\n</text>
-    用户名：  
+    用户姓名：  
     <input type="text" bindinput="userNameInput"/>  
-    密码：  
-    <input type="text" bindinput="userPasswordInput" password="true"/>
-    确认密码：  
-    <input type="text" bindinput="userPasswordInpuSure" password="true"/>  
+    电话号码：  
+    <input type="number" bindinput="userTeleInput" password="true"/>
+    确认电话号码：  
+    <input type="number" bindinput="userTeleInpuSure" password="true"/>  
     
     <radio-group class="radio-group" bindchange="radiochange">
     <label class="radio" wx:for="{{items}}">

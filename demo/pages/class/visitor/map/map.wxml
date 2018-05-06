@@ -3,7 +3,7 @@
 <div id='guide'>
 <button class='common' bindtap='map'>开始导航</button>
 <button class='common'>发起拼单</button>
-<button class='common'>常用工具</button>
+<button class='common' bindtap='tools'>汇率计算</button>
 <button class='common' bindtap='order'>电子导览</button>
 </div>
 <!--
