@@ -7,10 +7,11 @@
     "pages/class/visitor/pay/pay",
     "pages/class/visitor/tools/tools",
     "pages/class/visitor/order/order",
-    "pages/class/visitor/map/map",
+    "pages/class/visitor/index/index",
     "pages/class/visitor/order/scene/scene",
     "pages/class/visitor/order/detail/detail",
-    "pages/class/visitor/tools/addCur/addCur"
+    "pages/class/visitor/tools/addCur/addCur",
+    "pages/class/leader/index/index"
   ],
   "window": {
     "backgroundTextStyle": "light",

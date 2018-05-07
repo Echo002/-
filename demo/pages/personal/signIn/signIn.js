@@ -66,7 +66,7 @@ Page({
       }else{
         //this.data.submit_data = this.data.name + "@" + this.data.teleNumber;
         //console.log(this.data.submit_data);
-
+        console.log(this.data.userType);
         //判断是否有重复的姓名和密码
         wx.request({
           url: 'https://api.wxappclub.com/match',
@@ -109,6 +109,10 @@ Page({
                     wx.redirectTo({
                       url: '../../class/visitor/map/map',
                     });
+                    else
+                    wx.redirectTo({
+                      url: '../../class/leader/index/index',
+                    })
                 } else {
                   wx.showToast({
                     title: '有重名条目！',

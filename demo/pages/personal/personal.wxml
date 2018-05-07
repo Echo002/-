@@ -5,10 +5,10 @@
     用户名：  
     <input class="type" type="text" bindinput="userNameInput"/>  
     密码：  
-    <input class="type" type="text" bindinput="userPasswordInput" password="true"/> 
+    <input class="type" type="text" bindinput="userteleNumberInput" password="true"/> 
     <radio-group class="radio-group" bindchange="radiochange">
     <label class="radio" wx:for="{{items}}">
-    <radio value="{{item.name}}" checked="{{item.checked}}"/>{{item.value}}<br/>
+    <radio value="{{item.name}}" checked="{{item.checked}}" />{{item.value}}<br/>
     </label>
     </radio-group>
     <button bindtap="logIn">用户登录</button>  
