@@ -1,4 +1,4 @@
-// pages/class/leader/leader/index.js
+// pages/class/leader/rail/rail.js
 Page({
 
   /**

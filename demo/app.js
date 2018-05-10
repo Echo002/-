@@ -54,4 +54,10 @@ App({
   globalData: {
     userInfo: null
   },
+  data:{
+    userName:'请登录或注册',
+    teleNumber: '请登录或注册',
+    judge:false,
+    userType: '请登录或注册'
+  }
 })

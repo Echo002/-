@@ -1,2 +1,7 @@
 <!--pages/class/leader/index/index.wxml-->
-<text>导游主界面</text>
+<text>请选择相应的服务：</text>
+<div id='guide'>
+<button class='common' bindtap='operate'>游客管理</button>
+<button class='common' bindtap='rail'>电子围栏</button>
+</div>
+

@@ -1,0 +1,12 @@
+<view>
+<view class='title'>您的姓名：</view>
+<view class='value'>{{userName}}</view>
+<view class='title'>您的电话号码：</view>
+<view class='value'>{{teleNumber}}</view>
+<view class='title'>您的身份是：</view>
+<view class='value'>{{userType}}</view>
+</view>
+<button bindtap='login'>登录</button>
+<button bindtap='register'>注册</button>
+<button bindtap='service'>进入服务</button>
+<button bindtap='out'>退出登录</button>

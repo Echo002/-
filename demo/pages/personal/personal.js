@@ -64,24 +64,17 @@ Page({
               });
               console.log(that.data.checked);
               if (that.data.checked == true) {
-                wx.request({
-                  url: 'https://api.wxappclub.com/put',
-                  data: {
-                    appkey: '2tm48ywtju6fiadeqt23ef25u0xuxkkl',
-                    key: that.data.userName,
-                    value: that.data.teleNumber,
-                    type: that.data.userType
-                  },
-                  header: {
-                    'Content-Type': 'application/json'
-                  },
-                  success: function (res) {
-                    wx.showToast({
-                      title: '登录成功！',
-                      duration: 3000
-                    })
-                  }
-                });
+                wx.showToast({
+                  title: '登录成功！',
+                  duration: 3000
+                })
+                app.data.judge = true;
+                app.data.userType = that.data.userType;
+                app.data.userName = that.data.userName;
+                app.data.teleNumber = that.data.teleNumber;
+                /*console.log(that.data.userName);
+                console.log(app.data.userName);
+                console.log(app.data.teleNumber);*/
                 //根据用户类别不同来跳转到不同的面板
                 if (that.data.userType == 'yk')
                   wx.redirectTo({
@@ -93,7 +86,7 @@ Page({
                   })
               } else {
                 wx.showToast({
-                  title: '查无此人！',
+                  title: '查无此人!',
                   duration: 3000
                 });
                 return;

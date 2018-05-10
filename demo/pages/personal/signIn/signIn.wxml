@@ -1,7 +1,6 @@
 <!--pages/personal/signIn/signIn.wxml-->
 <view class="container">  
   <view class="usermotto">  
-    <text class="user-motto">{{motto}}\n\n</text>
     用户姓名：  
     <input type="text" bindinput="userNameInput"/>  
     电话号码：  

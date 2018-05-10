@@ -10,7 +10,7 @@ Page({
       {name:'dy', value:'我是导游'},
       {name:'yk',value:'我是游客'},
     ],
-    name: '',
+    userName: '',
     teleNumber: '',
     teleNumber_check: '',
     userType:'',            //判断用户类别
@@ -20,7 +20,7 @@ Page({
 
   userNameInput:function(e){
     this.setData({
-      name: e.detail.value
+      userName: e.detail.value
     })
   },
 
@@ -47,7 +47,7 @@ Page({
     var that = this
     //检查是否提交合理的用户信息
     console.log('注册提交按钮按下');
-    if(this.data.name == '' || this.data.teleNumber == '' || this.data.userType =='' || this.data.teleNumber_check == '')
+    if(this.data.userName == '' || this.data.teleNumber == '' || this.data.userType =='' || this.data.teleNumber_check == '')
     {
       wx.showToast({
         title: '请输入完整信息！',
@@ -72,7 +72,7 @@ Page({
           url: 'https://api.wxappclub.com/match',
           data: {
             appkey: '2tm48ywtju6fiadeqt23ef25u0xuxkkl',
-            key: that.data.name,
+            key: that.data.userName,
             value: that.data.teleNumber,
             type: that.data.userType
           },
@@ -90,7 +90,7 @@ Page({
                     url: 'https://api.wxappclub.com/put',
                     data: {
                       appkey: '2tm48ywtju6fiadeqt23ef25u0xuxkkl',
-                      key: that.data.name,
+                      key: that.data.userName,
                       value: that.data.teleNumber,
                       type: that.data.userType
                     },
@@ -104,10 +104,14 @@ Page({
                       })
                     }
                   });
+                  app.data.judge = true;
+                  app.data.userType = that.data.userType;
+                  app.data.userName = that.data.userName;
+                  app.data.teleNumber = that.data.teleNumber;
                   //根据用户类别不同来跳转到不同的面板
                   if (that.data.userType == 'yk')
                     wx.redirectTo({
-                      url: '../../class/visitor/map/map',
+                      url: '../../class/visitor/index/index',
                     });
                     else
                     wx.redirectTo({

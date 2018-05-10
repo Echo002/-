@@ -11,7 +11,10 @@
     "pages/class/visitor/order/scene/scene",
     "pages/class/visitor/order/detail/detail",
     "pages/class/visitor/tools/addCur/addCur",
-    "pages/class/leader/index/index"
+    "pages/class/leader/index/index",
+    "pages/class/leader/operate/operate",
+    "pages/class/leader/rail/rail",
+    "pages/index2/index2"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -32,7 +35,7 @@
         "selectedIconPath": "image/buttom1_p.png"
       },
       {
-        "pagePath": "pages/personal/personal",
+        "pagePath": "pages/index2/index2",
         "text": "我的",
         "iconPath": "image/buttom2.png",
         "selectedIconPath": "image/buttom2_p.png"
