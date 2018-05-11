@@ -8,7 +8,8 @@ Page({
   data: {
     userName: app.data.userName,
     teleNumber: app.data.teleNumber,
-    userType: app.data.userType
+    userType: app.data.userType,
+    condition: true  //判断按钮的显示
   },
 
   /**
@@ -30,6 +31,16 @@ Page({
    */
   onShow: function () {
     var that = this
+    if(app.data.judge == true)
+    {
+      this.setData({
+        condition:false
+      })
+    }else{
+      this.setData({
+        condition: true
+      })
+    }
     that.setData({
       userName: app.data.userName,
       teleNumber: app.data.teleNumber
@@ -64,52 +75,15 @@ Page({
   },
 
   login:function(){
-    if(app.data.judge == true)
-    {
-      wx.showModal({
-        title: '提醒',
-        content: '您有了登录记录，确定清除吗？',
-        success: function (res) {
-          if (res.confirm){
-            app.data.userName = '登录或注册后可查看';
-            app.data.teleNumber = '登录或注册后可查看';
-            app.data.judge = false;
-            app.data.userType = '登录或注册后可查看';
-            wx.navigateTo({
-              url: '../personal/personal',
-            })
-          }
-        }
-      })  
-    }else{
       wx.navigateTo({
         url: '../personal/personal',
       })
-    } 
   },
 
   register: function(){
-    if (app.data.judge == true) {
-      wx.showModal({
-        title: '提醒',
-        content: '您有了登录记录，确定清除吗？',
-        success: function (res) {
-          if (res.confirm) {
-            app.data.userName = '登录或注册后可查看';
-            app.data.teleNumber = '登录或注册后可查看';
-            app.data.judge = false;
-            app.data.userType = '登录或注册后可查看';
-            wx.navigateTo({
-              url: '../personal/signIn/signIn',
-            })
-          }
-        }
-      })
-    } else {
       wx.navigateTo({
         url: '../personal/signIn/signIn',
-      })
-    } 
+      }) 
   },
 
   service:function(){
@@ -144,7 +118,7 @@ Page({
       app.data.judge = false;
       app.data.userType = '请登录或注册';
       wx.showToast({
-        title: '重新打开页面生效!',
+        title: '重启页面生效!',
       })
     }
   }

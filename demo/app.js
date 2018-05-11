@@ -58,6 +58,7 @@ App({
     userName:'请登录或注册',
     teleNumber: '请登录或注册',
     judge:false,
-    userType: '请登录或注册'
+    userType: '请登录或注册',
+    condition: true  //判断按钮的显示
   }
 })

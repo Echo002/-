@@ -42,6 +42,14 @@ Page({
       })
       return;
     } else {
+      var teleTest = new RegExp('^1[3-9][0-9]{9}$');
+      if(!teleTest.exec(that.data.teleNumber)){
+        wx.showToast({
+          title: '请输入正确的手机号',
+          duration: 3000
+        });
+        return;
+      }
       //this.data.submit_data = this.data.name + "@" + this.data.teleNumber;
       //console.log(this.data.submit_data);
       console.log(this.data.userType);

@@ -55,6 +55,16 @@ Page({
       })
       return;
     }else{
+      var teleTest = new RegExp("^1[3-9][0-9]{9}$");
+      if (!teleTest.test(that.data.teleNumber)) {
+        wx.showToast({
+          title: '手机号非法',
+          duration: 3000
+        })
+        console.log(that.data.teleNumber);
+        console.log(!teleTest.test(that.data.teleNumber));
+        return;
+      }
       //检查两次输入的电话号码是否一致
       if (this.data.teleNumber != this.data.teleNumber_check)
       {

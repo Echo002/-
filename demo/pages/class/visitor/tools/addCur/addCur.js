@@ -1037,15 +1037,7 @@ Page({
 
 onLoad: function () {
     var that = this
-    //调用应用实例的方法获取全局数据
-    /*app.getUserInfo(function(userInfo){
-      //更新数据
-      that.setData({
-        userInfo:userInfo
-      })
-    }),*/
-
-     //获取用户存储的兑换金额
+    //获取用户存储的兑换金额
     wx.getStorage({
           key: 'myMainCur',
           success: function(res) {
@@ -1054,29 +1046,6 @@ onLoad: function () {
                 }) 
             } 
         })
-
-    // wx.request( {  
-    //   url: "https://wapp.talk-easy.cn/currency/getcurrencynames",  
-    //   header: {  
-    //                               //    'Content-Type': 'application/json' 
-    //                            "Content-Type": "application/x-www-form-urlencoded" 
-    //   },  
-    //   method: "POST",  
-     
-    //   success: function( res ) {   
-    //      that.setData({
-    //         curNameList:res.data
-    //       }) 
-    //   },
-    //   fail: function( res ) {  
-    //       console.error(res );  
-    //   },
-    //   complete: function( res ) {   
-    //     if( res == null || res.data == null ) {  
-    //       return;  
-    //     }  
-    //   }  
-    // })  
   },
  
   onReady:function(){

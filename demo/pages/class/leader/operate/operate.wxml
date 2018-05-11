@@ -1,2 +1,4 @@
 <!--pages/class/leader/operate/operate.wxml-->
-<text>pages/class/leader/operate/operate.wxml</text>
+<text>已登记的游客：</text>
+<button bindtap='test'>测试</button>
+<view wx:for= "{{list}}" class='list' bindtap='call' data-reply-phone='{{item.value}}'><text>姓名：{{item.key}}\n电话：{{item.value}}</text></view>

@@ -41,5 +41,7 @@
         "selectedIconPath": "image/buttom2_p.png"
       }
     ]
-  }
+  },
+  
+  "debug":"true"
 }

@@ -6,7 +6,7 @@
 <view class='title'>您的身份是：</view>
 <view class='value'>{{userType}}</view>
 </view>
-<button bindtap='login'>登录</button>
-<button bindtap='register'>注册</button>
-<button bindtap='service'>进入服务</button>
-<button bindtap='out'>退出登录</button>
+<button wx:if="{{condition}}" bindtap='login'>登录</button>
+<button wx:if="{{condition}}" bindtap='register'>注册</button>
+<button bindtap='service' wx:if="{{!condition}}">进入服务</button>
+<button bindtap='out' wx:if="{{!condition}}">退出登录</button>
