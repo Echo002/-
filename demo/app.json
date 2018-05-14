@@ -1,6 +1,11 @@
 {
   "pages": [
     "pages/index/index",
+    "pages/index/waypoint/waypoint",
+    "pages/index/destination/destination",
+    "pages/index/trip_list/trip_list",
+    "pages/index/poi_list/poi_list",
+    "pages/index/trip/trip",
     "pages/logs/logs",
     "pages/personal/personal",
     "pages/personal/signIn/signIn",
@@ -13,14 +18,15 @@
     "pages/class/visitor/tools/addCur/addCur",
     "pages/class/leader/index/index",
     "pages/class/leader/operate/operate",
-    "pages/class/leader/rail/rail",
-    "pages/index2/index2"
+    "pages/index2/index2",
+    "pages/class/visitor/map/map",
+    "pages/class/leader/rail/rail"
   ],
   "window": {
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "WeChat",
-    "navigationBarTextStyle": "black"
+    "navigationBarBackgroundColor": "#4abdcc",
+    "navigationBarTitleText": "欢迎使用易游",
+    "navigationBarTextStyle": "white"
   },
   "tabBar": {
     "color": "#7A7E83",
@@ -31,17 +37,16 @@
       {
         "pagePath": "pages/index/index",
         "text": "首页",
-        "iconPath": "image/buttom1.png",
-        "selectedIconPath": "image/buttom1_p.png"
+        "iconPath": "images/buttom1.png",
+        "selectedIconPath": "images/buttom1_p.png"
       },
       {
         "pagePath": "pages/index2/index2",
         "text": "我的",
-        "iconPath": "image/buttom2.png",
-        "selectedIconPath": "image/buttom2_p.png"
+        "iconPath": "images/buttom2.png",
+        "selectedIconPath": "images/buttom2_p.png"
       }
     ]
   },
-  
-  "debug":"true"
+  "debug": "false"
 }

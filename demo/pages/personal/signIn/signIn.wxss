@@ -1,1 +1,7 @@
 /* pages/personal/signIn/signIn.wxss */
+.block{
+  height: 25px
+}
+input{
+  border-bottom: 1px solid gainsboro;
+}

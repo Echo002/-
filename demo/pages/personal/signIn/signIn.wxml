@@ -1,18 +1,19 @@
 <!--pages/personal/signIn/signIn.wxml-->
 <view class="container">  
-  <view class="usermotto">  
+  <view class="usermotto">
+  <view class='block'></view>
     用户姓名：  
-    <input type="text" bindinput="userNameInput"/>  
+    <input type="text" bindinput="userNameInput"/>
+    <view class='block'></view>
     电话号码：  
-    <input type="number" bindinput="userTeleInput" password="true"/>
-    确认电话号码：  
-    <input type="number" bindinput="userTeleInpuSure" password="true"/>  
-    
+    <input type="number" bindinput="userTeleInput"/>
+    <view class='block'></view>
     <radio-group class="radio-group" bindchange="radiochange">
     <label class="radio" wx:for="{{items}}">
     <radio value="{{item.name}}" checked="{{item.checked}}"/>{{item.value}}<br/>
     </label>
     </radio-group>
+    <view class='block'></view>
     <button bindtap="logIn">确定</button>  
   </view>  
 </view>  

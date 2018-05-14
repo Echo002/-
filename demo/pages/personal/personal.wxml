@@ -3,15 +3,18 @@
     <text class="main_text">{{motto}}\n\n</text>
     <br/><br/>
     用户名：  
-    <input class="type" type="text" bindinput="userNameInput"/>  
-    密码：  
-    <input class="type" type="text" bindinput="userteleNumberInput" password="true"/> 
+    <input class="type" type="text" bindinput="userNameInput"/>
+    <br/> 
+    电话号码：  
+    <input class="type" type="text" bindinput="userteleNumberInput" password="true"/>
+    <br/>
     <radio-group class="radio-group" bindchange="radiochange">
     <label class="radio" wx:for="{{items}}">
-    <radio value="{{item.name}}" checked="{{item.checked}}" />{{item.value}}<br/>
+    <radio value="{{item.name}}" checked="{{item.checked}}" />{{item.value}}
     </label>
     </radio-group>
-    <button bindtap="logIn">用户登录</button>  
-    <button bindtap="signIn">用户注册</button> 
+    <br/>
+    <button bindtap="logIn">登录</button>  
+    <button bindtap="signIn">返回注册</button> 
   </view>  
 </view>  

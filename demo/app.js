@@ -2,6 +2,12 @@
 App({
   onLaunch: function () {
     var temp = []
+    const self = this;
+    wx.getSystemInfo({
+      success(res) {
+        self.systemInfo = res;
+      },
+    });
     wx.setStorage({
       key: "mySelectCurs",
       data: temp

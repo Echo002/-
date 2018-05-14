@@ -1,59 +1,34 @@
-//index.js
-//获取应用实例
-const app = getApp()
+const api = require('../../utils/api.js');
 
+const App = getApp();
 Page({
   data: {
-    motto: '欢迎来到易游！',
-    userInfo: {},
-    hasUserInfo: false,
-    canIUse: wx.canIUse('button.open-type.getUserInfo')
+    elements: [],
+    windowWidth: App.systemInfo.windowWidth,
   },
-  //事件处理函数
-  bindViewTap: function() {
+  onReady() {
+  },
+  onLoad() {
+    const self = this;
+    wx.showToast({
+      title: '正在加载',
+      icon: 'loading',
+      duration: 10000,
+    });
+    api.getExplorePlaceList({
+      success: (res) => {
+        const dest = res.data;
+        self.setData({
+          elements: dest.elements,
+        });
+        wx.hideToast();
+      },
+    });
+  },
+  viewPOI(e) {
+    const data = e.currentTarget.dataset;
     wx.navigateTo({
-      url: '../logs/logs'
-    })
+      url: `destination/destination?type=${data.type}&id=${data.id}&name=${data.name}`,
+    });
   },
-  onLoad: function () {
-    if (app.globalData.userInfo) {
-      this.setData({
-        userInfo: app.globalData.userInfo,
-        hasUserInfo: true
-      })
-    } else if (this.data.canIUse){
-      // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
-      // 所以此处加入 callback 以防止这种情况
-      app.userInfoReadyCallback = res => {
-        this.setData({
-          userInfo: res.userInfo,
-          hasUserInfo: true
-        })
-      }
-    } else {
-      // 在没有 open-type=getUserInfo 版本的兼容处理
-      wx.getUserInfo({
-        success: res => {
-          app.globalData.userInfo = res.userInfo
-          this.setData({
-            userInfo: res.userInfo,
-            hasUserInfo: true
-          })
-        }
-      })
-    }
-  },
-  getUserInfo: function(e) {
-    console.log(e)
-    app.globalData.userInfo = e.detail.userInfo
-    this.setData({
-      userInfo: e.detail.userInfo,
-      hasUserInfo: true
-    })
-  },
-  /*test:function(){
-    wx.navigateTo({
-      url: '../personal/personal',
-    })
-  }*/
-})
+});

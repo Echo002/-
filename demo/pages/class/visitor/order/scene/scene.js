@@ -6,7 +6,7 @@ Page({
     voice:"",
     list: [],
     titclass:"scene1",
-    a_btn: ['../../../../../image/src/play_scene.png'],
+    a_btn: ['../../../../../images/src/play_scene.png'],
     last:0,
     pause:false
   },

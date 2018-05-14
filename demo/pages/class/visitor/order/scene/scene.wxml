@@ -1,9 +1,9 @@
 <view class="container">
   <view class="title">
-    <image class="titbg" src="../../../../../image/src/titbg.png" background-size="cover"></image>
+    <image class="titbg" src="../../../../../images/src/titbg.png" background-size="cover"></image>
     <view class="tit">
-    	<image class="scene" src="../../../../../image/src/{{titclass}}.png" background-size="cover"></image>
-    	<image class="mo" src="../../../../../image/src/mo.png" background-size="cover"></image>
+    	<image class="scene" src="../../../../../images/src/{{titclass}}.png" background-size="cover"></image>
+    	<image class="mo" src="../../../../../images/src/mo.png" background-size="cover"></image>
     </view>
   </view>
   <view class="items">

@@ -1,12 +1,56 @@
 <view>
 <view class='title'>您的姓名：</view>
-<view class='value'>{{userName}}</view>
+<view class='block'></view>
+<view class='value'><text class='input'>{{userName}}</text></view>
+<view class='block'></view>
 <view class='title'>您的电话号码：</view>
-<view class='value'>{{teleNumber}}</view>
+<view class='block'></view>
+<view class='value'><text class='input'>{{teleNumber}}</text></view>
+<view class='block'></view>
 <view class='title'>您的身份是：</view>
-<view class='value'>{{userType}}</view>
+<view class='block'></view>
+<view class='value'><text class='input'>{{userType}}</text></view>
+<view class='block'></view>
 </view>
-<button wx:if="{{condition}}" bindtap='login'>登录</button>
-<button wx:if="{{condition}}" bindtap='register'>注册</button>
-<button bindtap='service' wx:if="{{!condition}}">进入服务</button>
-<button bindtap='out' wx:if="{{!condition}}">退出登录</button>
+
+
+  <view wx:if="{{condition}}" class="marUpTop func">
+  <view wx:if="{{condition}}" class="item" bindtap="login">
+      <image wx:if="{{condition}}" class="item-image" src="../../images/index2/jacintosh.png"/>
+      <text wx:if="{{condition}}" class="item-name">登录</text> 
+      <image wx:if="{{condition}}" class="right-image" src="../../images/index2/right.png"/>
+    </view>
+
+    <view wx:if="{{condition}}" class="item" bindtap="register">
+      <image wx:if="{{condition}}" class="item-image" src="../../images/index2/capsule.png"/>
+      <text wx:if="{{condition}}" class="item-name">注册</text> 
+      <image wx:if="{{condition}}" class="right-image" src="../../images/index2/right.png"/>
+    </view>
+  </view>
+
+  <view wx:if="{{!condition}}" class="marUpTop func">
+  <view wx:if="{{!condition}}" class="item" bindtap="service">
+      <image wx:if="{{!condition}}" class="item-image" src="../../images/index2/usercenter.png"/>
+      <text wx:if="{{!condition}}" class="item-name">进入服务</text> 
+      <image wx:if="{{!condition}}" class="right-image" src="../../images/index2/right.png"/>
+    </view>
+
+    <view wx:if="{{!condition}}" class="item" bindtap="out">
+      <image wx:if="{{!condition}}" class="item-image" src="../../images/index2/headphone.png"/>
+      <text wx:if="{{!condition}}" class="item-name">退出登录</text> 
+      <image wx:if="{{!condition}}" class="right-image" src="../../images/index2/right.png"/>
+    </view>
+    <view wx:if="{{!condition}}" class="item" bindtap="sysConf">
+      <image wx:if="{{!condition}}" class="item-image" src="../../images/index2/jigsaw.png"/>
+      <text wx:if="{{!condition}}" class="item-name">系统配置</text> 
+      <image wx:if="{{!condition}}" class="right-image" src="../../images/index2/right.png"/>
+    </view>
+
+    <view wx:if="{{!condition}}" class="item" bindtap="feedback">
+      <image wx:if="{{!condition}}" class="item-image" src="../../images/index2/radio128.png"/>
+      <text wx:if="{{!condition}}" class="item-name">意见反馈</text> 
+      <image wx:if="{{!condition}}" class="right-image" src="../../images/index2/right.png"/>
+    </view>
+  </view>
+
+  <button wx:if="{{condition}}" bindtap='hehe'>nihao</button>

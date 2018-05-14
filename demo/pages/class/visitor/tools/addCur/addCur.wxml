@@ -13,7 +13,7 @@
                                         data-text="{{items[i].cn}}"
                                         data-id="{{items[i].name}}" 
                                         bindtap="bindlogoTap"> 
-                                    <image src="../../../../../image/id128/{{items[i].name}}.png" 
+                                    <image src="../../../../../images/id128/{{items[i].name}}.png" 
                                         class="cur_logo"  />                                                     
                                     <view class="nameTxt">
                                         <text>{{items[i].cn}}</text>

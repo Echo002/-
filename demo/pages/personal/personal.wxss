@@ -9,3 +9,6 @@
   background: #ffffff;
   width: 50%;
 }
+input{
+  border-bottom: 1px solid gainsboro;
+}

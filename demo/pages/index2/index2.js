@@ -121,5 +121,11 @@ Page({
         title: '重启页面生效!',
       })
     }
+  },
+
+  hehe:function(){
+    var that = this;
+    console.log(that.data.condition);
+    console.log(app.data.judge);
   }
 })
