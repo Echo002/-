@@ -60,5 +60,17 @@ Page({
     wx.navigateTo({
       url: '../rail/rail',
     })
+  },
+
+  notice: function(){
+    wx.navigateTo({
+      url: '../notice/notice',
+    })
+  },
+
+  save: function () {
+    wx.navigateTo({
+      url: '../../save/tutorial/tutorial',
+    })
   }
 })

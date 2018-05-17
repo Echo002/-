@@ -1,6 +1,17 @@
 {
   "pages": [
     "pages/index/index",
+    "pages/class/leader/notice/notice",    
+    "pages/class/save/tutorial/tutorial",
+    "pages/class/save/isBreath/isBreath",
+    "pages/class/save/breathe/breathe",
+    "pages/class/save/burning/burning",
+    "pages/class/save/appeal/appeal",
+    "pages/class/save/unconsciousnessStudy/unconsciousnessStudy",
+    "pages/class/visitor/index/index",
+    "pages/class/leader/index/index",
+    "pages/class/leader/operate/operate",
+    
     "pages/index/waypoint/waypoint",
     "pages/index/destination/destination",
     "pages/index/trip_list/trip_list",
@@ -9,15 +20,13 @@
     "pages/logs/logs",
     "pages/personal/personal",
     "pages/personal/signIn/signIn",
-    "pages/class/visitor/pay/pay",
+    "pages/class/visitor/plan/plan",
+    "pages/class/visitor/plan/detail/detail",
     "pages/class/visitor/tools/tools",
     "pages/class/visitor/order/order",
-    "pages/class/visitor/index/index",
     "pages/class/visitor/order/scene/scene",
     "pages/class/visitor/order/detail/detail",
     "pages/class/visitor/tools/addCur/addCur",
-    "pages/class/leader/index/index",
-    "pages/class/leader/operate/operate",
     "pages/index2/index2",
     "pages/class/visitor/map/map",
     "pages/class/leader/rail/rail"
@@ -30,7 +39,7 @@
   },
   "tabBar": {
     "color": "#7A7E83",
-    "selectedColor": "#3cc51f",
+    "selectedColor": "#4abdcc",
     "borderStyle": "black",
     "backgroundColor": "#ffffff",
     "list": [

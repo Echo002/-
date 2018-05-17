@@ -1,0 +1,54 @@
+<!-- 新建活动 -->
+<view class="add-page">
+  <form bindsubmit="submitForm">
+    <view class="weui-toptips weui-toptips_warn" wx:if="{{showTopTips}}">{{TopTips}}</view>
+    <view class="mod-a">
+      <!-- 活动主题 -->
+      <view class="mod t-name">
+        <text class="key">活动名称</text>
+        <input name="title" class="input" maxlength="100" placeholder="请输入活动名称" value="{{title}}"/>
+        <image class="arrow-r" src="../../../../images/notice/arrow-r-0.png"></image>
+      </view>
+    </view>
+
+    <view class="mod-a mt20">
+      <!-- 活动类别 -->
+      <view class="mod t-sign-time">
+        <text class="key">活动类别</text>
+        <picker name="typeIndex" bindchange="bindTypeChange" value="{{typeIndex}}" range="{{types}}">
+          <view class="value" name="types">{{types[typeIndex]}}
+            <image class="arrow-r" src="../../../../images/notice/arrow-r-0.png"></image>
+          </view>
+        </picker>
+      </view>
+
+      <!-- 活动地点 -->
+      <view class="mod t-address" bindtap="chooseLocation">
+        <text class="key">活动地点</text>
+        <text name="address" class="value" bindtap="addressChange" value="{{address}}">{{address}}</text>
+        <image class="arrow-r" src="../../../../images/notice/arrow-r-0.png"></image>
+      </view>
+
+       <!-- 有效时间 -->
+      <view bindtap="timeChange" class="mod t-sign-time">
+        <text class="key">有效时间</text>
+        <picker name="time" mode="date" value="{{date}}" start="{{date}}" end="2020-09-01" bindchange="bindDateChange">
+          <view class="value" name="endtime">{{date}}
+            <image class="arrow-r" src="../../../../images/notice/arrow-r-0.png"></image>
+          </view>
+        </picker>
+      </view>
+    </view>
+
+    <!-- 活动内容 -->
+    <view class="mod-a mt20">
+    <view class="mod-big my-nick">
+    <textarea class="weui-textarea" placeholder="请描述通知信息，不要超过200字" name="content" maxlength="{{noteMaxLen}}" value="{{content}}" bindinput="bindTextAreaChange" style="height: 7em"/>
+    <view class="chnumber">{{noteNowLen}}/{{noteMaxLen}}</view>
+    </view>
+    </view>
+    <view class="marTop border">
+      <button type="primary" size="default" style="background-color: #4abdcc;" formType="submit">提交</button>
+    </view>
+  </form>
+</view>

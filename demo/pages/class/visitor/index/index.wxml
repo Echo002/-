@@ -1,19 +1,34 @@
 <!--pages/class/visitor/map/map.wxml-->
-<text>请选择相应的服务：\n</text>
-<div id='guide'>
-<button class='common' bindtap='map'>开始导航</button>
-<button class='common'>发起拼单</button>
-<button class='common' bindtap='tools'>汇率计算</button>
-<button class='common' bindtap='order'>电子导览</button>
-</div>
-<!--
-<map
-        style="width: 100%; height: 300px;"
-        latitude="{{latitude}}"
-        longitude="{{longitude}}"
-        markers="{{markers}}"
-        covers="{{covers}}"
-        >
-      </map>
--->
+<text>请选择相应的服务：</text>
+<view class="container-intro">
 
+<view bindtap='map' class="header-container">
+      <image class="header-img" src="../../../../images/intro/map.jpg" ></image> 
+    <text class="header-title">开始导航</text> 
+</view>
+
+<view bindtap='plan' class="header-container">
+      <image class="header-img" src="../../../../images/intro/plan.jpg" ></image> 
+    <text class="header-title">查看行程</text> 
+</view>
+
+<view bindtap='tools' class="header-container">
+      <image class="header-img" src="../../../../images/intro/tools.jpg" ></image> 
+    <text class="header-title">汇率计算</text> 
+</view>
+
+<view bindtap='order' class="header-container">
+      <image class="header-img" src="../../../../images/intro/order.jpg" ></image> 
+    <text class="header-title-white">电子导览</text> 
+</view>
+
+<view bindtap='save' class="header-container">
+      <image class="header-img" src="../../../../images/intro/save.jpg" ></image> 
+    <text class="header-title">急救知识</text> 
+</view>
+
+<view bindtap='advice' class="header-container">
+      <image class="header-img" src="../../../../images/intro/advice.jpg" ></image> 
+    <text class="header-title">投诉建议</text> 
+</view>
+</view>

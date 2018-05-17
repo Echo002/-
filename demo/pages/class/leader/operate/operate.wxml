@@ -1,4 +1,9 @@
 <!--pages/class/leader/operate/operate.wxml-->
-<text>已登记的游客：</text>
-<button bindtap='test'>测试</button>
-<view wx:for= "{{list}}" class='list' bindtap='call' data-reply-phone='{{item.value}}'><text>姓名：{{item.key}}\n电话：{{item.value}}</text></view>
+<view class="container">
+  <view class="news-item-container">
+  <text class="sub-title">已经登记的游客 共计{{num}}个</text>
+      <view class="news-item" wx:for="{{list}}" bindtap='call' data-reply-phone='{{item.value}}'>
+          <text>姓名：{{item.key}}\n电话：{{item.value}}</text>
+      </view>
+  </view>  
+</view>

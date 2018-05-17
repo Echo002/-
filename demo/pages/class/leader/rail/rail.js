@@ -1,13 +1,13 @@
 Page({
   data: {
     Height: 0,
-    scale: 13,
+    scale: 16,
     latitude: "",
     longitude: "",
     markers: [],
     controls: [{
       id: 1,
-      iconPath: '../../../../image/map/suoxiao.png',
+      iconPath: '../../../../images/map/suoxiao.png',
       position: {
         left: 280,
         top: 100 - 50,
@@ -18,7 +18,7 @@ Page({
     },
     {
       id: 2,
-      iconPath: '../../../../image/map/fangda.png',
+      iconPath: '../../../../images/map/fangda.png',
       position: {
         left: 280,
         top: 130 - 50,
@@ -58,8 +58,8 @@ Page({
             longitude: res.longitude,
             width: 20,
             height: 20,
-            iconPath: "../../../../image/map/1.png",
-            title: "点我借球！"
+            iconPath: "../../../../images/map/location.png",
+            title: "我在这儿！"
           }],
           circles: [{
             latitude: res.latitude,
@@ -91,17 +91,13 @@ Page({
     var that = this;
     console.log("scale===" + this.data.scale)
     if (e.controlId === 1) {
-      // if (this.data.scale === 13) {
       that.setData({
         scale: --this.data.scale
       })
-      // }
     } else {
-      //  if (this.data.scale !== 13) {
       that.setData({
         scale: ++this.data.scale
       })
-      // }
     }
   },
 })

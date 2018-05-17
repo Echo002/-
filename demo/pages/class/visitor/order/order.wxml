@@ -1,5 +1,5 @@
 <!--语音画册界面-->
-<view class="container">
+<view class="container-this">
   <view class="title">
     <image class="huace" src="../../../../images/src/huace.png" background-size="contain"></image>
   </view>

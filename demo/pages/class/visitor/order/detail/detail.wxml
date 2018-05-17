@@ -1,4 +1,4 @@
-<view class="container">
+<view class="container-this">
   <view class="banner">
   	<image class="item-banner" src="{{detailInfo.HD}}" background-size="cover"></image>
     <view class="audio">
@@ -9,14 +9,14 @@
   <view>
     <view class="title-view">
       <text class="title">{{detailInfo.name}}</text>
-      <image class="detail_bg" src="../../src/tit_detail_bg.png" background-size="cover"></image>
-      <image class="mo" src="../../src/mo.png" background-size="cover"></image>
+      <image class="detail_bg" src="../../../../../images/src/tit_detail_bg.png" background-size="cover"></image>
+      <image class="mo" src="../../../../../images/src/mo.png" background-size="cover"></image>
     </view>
   	<text class="content">{{content}}</text>
   </view>
   <view>
-    <image class="line" src="../../src/line.png" background-size="cover"></image>
+    <image class="line" src="../../../../../images/src/line.png" background-size="cover"></image>
     <text class="intro">1987年12月，秦始皇陵及兵马俑被列入世界文化遗产名录。</text>
-    <image class="logo" src="../../src/logo.jpg" background-size="cover"></image>
+    <image class="logo" src="../../../../../images/src/logo.jpg" background-size="cover"></image>
   </view>
 </view>

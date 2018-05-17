@@ -50,8 +50,6 @@ Page({
         });
         return;
       }
-      //this.data.submit_data = this.data.name + "@" + this.data.teleNumber;
-      //console.log(this.data.submit_data);
       console.log(this.data.userType);
       //判断是否有重复的姓名和密码
         wx.request({

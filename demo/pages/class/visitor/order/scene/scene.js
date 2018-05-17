@@ -53,15 +53,15 @@ Page({
     var pause;
     if(id == that.data.last&&that.data.pause==false){
       that.audioCtx.pause();
-      tmp[id] = '../../../../../image/src/play_scene.png'
+      tmp[id] = '../../../../../images/src/play_scene.png'
       pause = true
     }else{
       if(id != that.data.last){
         that.audioCtx.setSrc(voice)
       }
       that.audioCtx.play();
-      tmp[that.data.last] = '../../../../../image/src/play_scene.png'
-      tmp[id] = '../../../../../image/src/pause_scene.png'
+      tmp[that.data.last] = '../../../../../images/src/play_scene.png'
+      tmp[id] = '../../../../../images/src/pause_scene.png'
       pause = false
     }
     that.setData({

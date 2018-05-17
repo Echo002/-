@@ -6,13 +6,34 @@ Page({
    */
   data: {
     list:[],
+    num: 0
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
+    var that = this;
+    wx.request({
+      url: 'https://api.wxappclub.com/list',
+      data: {
+        appkey: '2tm48ywtju6fiadeqt23ef25u0xuxkkl',
+        type: 'yk'
+      },
+      header: {
+        'Content-Type': 'application/json'
+      },
+      success: function (res) {
+        if (res.data.success) {
+          that.setData({
+            list: res.data.result,
+          })
+        };
+        that.setData({
+          num: that.data.list.length
+        });
+      }
+    });
   },
 
   /**
@@ -68,29 +89,5 @@ Page({
     wx.makePhoneCall({
       phoneNumber: e.currentTarget.dataset.replyPhone,
     })
-  },
-
-  test:function(){
-    var that = this;
-    wx.request({
-      url: 'https://api.wxappclub.com/list',
-      data: {
-        appkey: '2tm48ywtju6fiadeqt23ef25u0xuxkkl',
-        type: 'yk'
-      },
-      header: {
-        'Content-Type': 'application/json'
-      },
-      success: function (res) {
-        if (res.data.success) {
-          //var result = res.data.result;
-          //for(var i in result){
-            that.setData({
-              list:res.data.result,
-            })  
-          //}
-        }
-      }
-    });
   }
 })

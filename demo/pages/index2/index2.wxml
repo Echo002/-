@@ -1,16 +1,12 @@
-<view>
-<view class='title'>您的姓名：</view>
-<view class='block'></view>
-<view class='value'><text class='input'>{{userName}}</text></view>
-<view class='block'></view>
-<view class='title'>您的电话号码：</view>
-<view class='block'></view>
-<view class='value'><text class='input'>{{teleNumber}}</text></view>
-<view class='block'></view>
-<view class='title'>您的身份是：</view>
-<view class='block'></view>
-<view class='value'><text class='input'>{{userType}}</text></view>
-<view class='block'></view>
+<view class="user">
+    <image class="icon" src="{{userTypeImg}}"/>
+    <text class="name" style='width:{{winWidth - 180}}px;'>{{userName}}</text>
+    <text class="name" style='width:30px;'>{{userType}}</text>
+</view>
+
+<view class='item'>
+<view class='item-name'>您的电话号码：</view>
+<view class='item-name'><text class='input'>{{teleNumber}}</text></view>
 </view>
 
 
@@ -40,17 +36,19 @@
       <text wx:if="{{!condition}}" class="item-name">退出登录</text> 
       <image wx:if="{{!condition}}" class="right-image" src="../../images/index2/right.png"/>
     </view>
-    <view wx:if="{{!condition}}" class="item" bindtap="sysConf">
+
+    <view wx:if="{{!condition}}" class="item" bindtap="clearCache">
       <image wx:if="{{!condition}}" class="item-image" src="../../images/index2/jigsaw.png"/>
-      <text wx:if="{{!condition}}" class="item-name">系统配置</text> 
+      <text wx:if="{{!condition}}" class="item-name">清理缓存</text> 
       <image wx:if="{{!condition}}" class="right-image" src="../../images/index2/right.png"/>
     </view>
+    <modal hidden="{{cacheClearHidden}}" title="提示" confirm-text="清理" bindcancel="cancel" bindconfirm="beginClear">
+清除缓存后，之前的历史消息将无法看到，确认清理？
+  </modal>
+</view>
 
-    <view wx:if="{{!condition}}" class="item" bindtap="feedback">
-      <image wx:if="{{!condition}}" class="item-image" src="../../images/index2/radio128.png"/>
-      <text wx:if="{{!condition}}" class="item-name">意见反馈</text> 
-      <image wx:if="{{!condition}}" class="right-image" src="../../images/index2/right.png"/>
-    </view>
+<view class="item" bindtap="police">
+    <image class="item-image" src="../../images/index2/radio128.png"/>
+    <text class="item-name">一键报警</text> 
+    <image class="right-image" src="../../images/index2/right.png"/>
   </view>
-
-  <button wx:if="{{condition}}" bindtap='hehe'>nihao</button>

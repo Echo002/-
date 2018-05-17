@@ -1,1 +1,2 @@
 /* pages/class/leader/index/index.wxss */
+@import "../../visitor/index/index.wxss";

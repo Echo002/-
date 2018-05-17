@@ -1,4 +1,8 @@
 /**index.wxss**/
+page{
+  background-color: #fff;
+  line-height: 1;
+}
 .pageHead
 {
   display: flex;
@@ -28,7 +32,7 @@
   flex-direction: row;
   padding: 24rpx;
   margin-top: 28rpx;
-      background-color: #f3f3f3;
+  background-color: #f3f3f3;
   border-top: 1rpx solid #d0d0d0;
   border-bottom: 1rpx solid #d0d0d0;
 }

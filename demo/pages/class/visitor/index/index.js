@@ -22,5 +22,17 @@ Page({
     wx.navigateTo({
       url: '../tools/tools',
     })
+  },
+
+  plan:function(){
+    wx.navigateTo({
+      url: '../plan/plan',
+    })
+  },
+
+  save:function(){
+    wx.navigateTo({
+      url: '../../save/tutorial/tutorial',
+    })
   }
 })

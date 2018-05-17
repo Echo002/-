@@ -1,4 +1,4 @@
-<view class="container">
+<view class="container-this">
   <view class="title">
     <image class="titbg" src="../../../../../images/src/titbg.png" background-size="cover"></image>
     <view class="tit">

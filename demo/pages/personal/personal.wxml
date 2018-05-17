@@ -1,20 +1,33 @@
-<view class="main">  
-  <view class="usermotto">  
-    <text class="main_text">{{motto}}\n\n</text>
-    <br/><br/>
-    用户名：  
-    <input class="type" type="text" bindinput="userNameInput"/>
-    <br/> 
-    电话号码：  
-    <input class="type" type="text" bindinput="userteleNumberInput" password="true"/>
-    <br/>
+<view class="login-center">
+    <view class="login-logo">
+      <view class="login-box">
+        <view class="login-text"><text class='con'>人生短暂，还在等什么?</text></view>
+        <view class="login-text"><text class='con'>拉上背包，畅游天下。</text></view>
+      </view>
+   </view>
+  <view class="usermotto">
+  <view class='block'></view>
+    <view class="from-list">
+      <view class="section">
+    <input class="type" type="text" bindinput="userNameInput" placeholder="请输入您的姓名" placeholder-class='placeholders'/>
+      </view>
+    </view>
+
+    <view class="from-list">
+      <view class="section">
+    <input class="type" type="text" bindinput="userteleNumberInput" placeholder="请输入您的电话号码" placeholder-class='placeholders'/>
+      </view>
+    </view>
+
     <radio-group class="radio-group" bindchange="radiochange">
     <label class="radio" wx:for="{{items}}">
     <radio value="{{item.name}}" checked="{{item.checked}}" />{{item.value}}
     </label>
     </radio-group>
-    <br/>
-    <button bindtap="logIn">登录</button>  
-    <button bindtap="signIn">返回注册</button> 
+
+    <view class='block'></view>
+    <button bindtap="logIn">登录</button> 
+    <view class='block'></view>
+    <button bindtap="signIn">返回注册</button>
   </view>  
 </view>  

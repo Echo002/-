@@ -3,7 +3,7 @@ Page({
     detailInfo : {},
     content:"",
     audioCtx: null,
-    a_btn: '../../src/play_detail.png',
+    a_btn: '../../../../../images/src/play_detail.png',
     playorpause:true
   },
   getSceneDetail: function(id){
@@ -36,13 +36,13 @@ Page({
     if(that.data.playorpause){
       that.audioCtx.play();
       that.setData({
-        a_btn: '../../src/pause_detail.png',
+        a_btn: '../../../../../images/src/pause_detail.png',
         playorpause:false
       })
     }else{
       that.audioCtx.pause();
       that.setData({
-        a_btn: '../../src/play_detail.png',
+        a_btn: '../../../../../images/src/play_detail.png',
         playorpause:true
       })
     }

@@ -1,2 +1,3 @@
 <!--pages/class/visitor/map/map.wxml-->
-<text>pages/class/visitor/map/map.wxml</text>
+<map id="map" longitude="{{longitude}}" latitude="{{latitude}}" scale="{{scale}}" controls="{{controls}}" bindcontroltap="controltap" markers="{{markers}}" bindmarkertap="markertap" polyline="{{polyline}}" bindregionchange="regionchange" show-location style="width: 100%; height: {{view.Height}}px;"></map>
+

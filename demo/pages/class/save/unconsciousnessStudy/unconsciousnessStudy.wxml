@@ -1,0 +1,7 @@
+<import src="../tutorialList.wxml"/>
+<view>
+  <template
+    is="tutorialList"
+    data="{{list}}"
+  />
+</view>

@@ -9,7 +9,12 @@ Page({
     userName: app.data.userName,
     teleNumber: app.data.teleNumber,
     userType: app.data.userType,
-    condition: true  //判断按钮的显示
+    condition: true,  //判断按钮的显示
+    avatarUrl: "",
+    nickName: "",
+    winWidth: "",
+    cacheClearHidden: true,
+    userTypeImg: "../../images/userImg/01.png"
   },
 
   /**
@@ -31,6 +36,14 @@ Page({
    */
   onShow: function () {
     var that = this
+    wx.getSystemInfo({
+      success: function (res) {
+        that.setData({
+          winWidth: res.windowWidth
+        });
+      }
+    });
+
     if(app.data.judge == true)
     {
       this.setData({
@@ -48,14 +61,16 @@ Page({
     switch(app.data.userType){
       case 'dy':{
         that.setData({userType: '导游',});
+        that.setData({ userTypeImg: "../../images/userImg/03.png"});
         break;
       }
       case 'yk':{
         that.setData({ userType: '游客', });
+        that.setData({ userTypeImg: "../../images/userImg/02.png" });
         break;
       }
       default:{
-        that.setData({ userType: '注册或登陆后可查看', });
+        that.setData({ userType: '空', });
       }
     }
   },
@@ -114,7 +129,7 @@ Page({
       })
     }else{
       app.data.userName = '请登录或注册';
-      app.data.teleNumber = '请登录或注册';
+      app.data.teleNumber = '空';
       app.data.judge = false;
       app.data.userType = '请登录或注册';
       wx.showToast({
@@ -123,9 +138,58 @@ Page({
     }
   },
 
-  hehe:function(){
-    var that = this;
-    console.log(that.data.condition);
-    console.log(app.data.judge);
+  //clear
+  clearCache: function () {
+    this.setData({
+      cacheClearHidden: false
+    })
+  },
+  cancel: function () {
+    this.setData({
+      cacheClearHidden: true
+    })
+  },
+  beginClear: function () {
+    this.setData({
+      cacheClearHidden: true
+    })
+    wx.showLoading({
+      title: '清理中',
+      mask: true
+    })
+
+    var cacheHubNum = -1
+    var cacheHubIndex = -1
+    var cacheHubNumObj = wx.getStorageSync("cacheHubNum")
+    if (typeof (cacheHubNumObj) == 'number') {
+      cacheHubNum = cacheHubNumObj
+    }
+    var cacheHubIndexObj = wx.getStorageSync("cacheHubIndex")
+    if (typeof (cacheHubIndexObj) == 'number') {
+      cacheHubIndex = cacheHubIndexObj
+    }
+    if (cacheHubNum > -1) {
+      for (var i = 0; i <= cacheHubNum; i++) {
+        wx.removeStorageSync('oldMsgs_' + i)
+      }
+    }
+    wx.setStorageSync('cacheHubNum', -1)
+    wx.setStorageSync('cacheHubIndex', -1)
+
+    // 设置全局清理标识
+    app.globalData.isCleaned = true
+
+    wx.hideLoading()
+    wx.showToast({
+      title: '清理完成',
+      icon: 'success',
+      duration: 1000
+    })
+  },
+
+  police:function(){
+    wx.makePhoneCall({
+      phoneNumber: '110',
+    })
   }
 })

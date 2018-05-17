@@ -2,9 +2,8 @@
 <view class="container">
     <view  bindtap="bindAddCur"  class="pageHead" >
         <view class="userinfo" >
-            <text class="userinfo-nickname">欢迎您使用汇率转换：</text>
+            <text>欢迎您使用汇率转换：</text>
         </view>
-          
         <view class="addCur"  bindtap="bindAddCur">
             <text>+</text>
         </view>
@@ -15,16 +14,16 @@
             </view>
             <view class="middle">
                   <view  class="top">
-                        <view>
-                              <text>{{myMainCur.name}} {{myMainCur.cn}}</text>
-                        </view> 
-                        <view class="datetimeTxt">
-                              <text>{{curDate}}</text>
-                        </view>
+                    <view>
+                    <text>{{myMainCur.name}} {{myMainCur.cn}}</text>
+                    </view> 
+                    <view class="datetimeTxt">
+                      <text>{{curDate}}</text>
+                    </view>
                   </view>           
                   <view   class="amountInput">
-                        <input  bindinput="bindKeyInput"   placeholder="100" maxlength="180"  type="digit"  />
-                  </view>
+                  <input  bindinput="bindKeyInput"   placeholder="100" maxlength="180"  type="digit"  />
+              </view>
             </view>
 
     </view>
