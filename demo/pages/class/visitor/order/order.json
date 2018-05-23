@@ -1,1 +1,6 @@
-{}
+{
+  "navigationBarBackgroundColor": "#FFF",
+  "backgroundTextStyle": "light",
+  "navigationBarTitleText": "电子导览",
+  "navigationBarTextStyle": "black"
+}

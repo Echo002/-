@@ -11,7 +11,7 @@
   <view class="appeal-telephone-container">
     <image
       class="appeal-telephone"
-      src="../../assets/images/telephone-large.svg"
+      src="../../../../images/save/telephone-large.svg"
       bindtap="callPhone"
     />
   </view>

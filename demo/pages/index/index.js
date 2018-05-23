@@ -18,6 +18,7 @@ Page({
     api.getExplorePlaceList({
       success: (res) => {
         const dest = res.data;
+        console.log(res);
         self.setData({
           elements: dest.elements,
         });

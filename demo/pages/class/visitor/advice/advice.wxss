@@ -1,0 +1,22 @@
+.layout-column {
+    display:flex;
+    flex-direction: column;
+}
+
+.marUpTop{
+  margin-top: 20px;
+}
+
+.border {
+    background-color:white;
+    padding:5px 15px;
+}
+
+.desc {
+    width: auto;
+    height: 80px;
+}
+
+.marTop {
+  margin-top:15px;
+}

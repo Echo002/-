@@ -1,7 +1,6 @@
 // pages/index2/index2.js
 var app = getApp()
 Page({
-
   /**
    * 页面的初始数据
    */
@@ -11,7 +10,6 @@ Page({
     userType: app.data.userType,
     condition: true,  //判断按钮的显示
     avatarUrl: "",
-    nickName: "",
     winWidth: "",
     cacheClearHidden: true,
     userTypeImg: "../../images/userImg/01.png"
@@ -21,7 +19,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
+    
   },
 
   /**
@@ -35,7 +33,31 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    var that = this
+    var that = this;
+    wx.getStorage({
+      key: 'name',
+      success: function (res) {
+        app.data.userName = res.data;
+      }
+    });
+    wx.getStorage({
+      key: 'telephone',
+      success: function (res) {
+        app.data.teleNumber = res.data;
+      }
+    });
+    wx.getStorage({
+      key: 'type',
+      success: function (res) {
+        app.data.userType = res.data;
+      }
+    });
+    wx.getStorage({
+      key: 'judge',
+      success: function (res) {
+        app.data.judge = res.data;
+      }
+    })
     wx.getSystemInfo({
       success: function (res) {
         that.setData({
@@ -54,10 +76,11 @@ Page({
         condition: true
       })
     }
-    that.setData({
+    this.setData({
       userName: app.data.userName,
-      teleNumber: app.data.teleNumber
-    });
+      teleNumber: app.data.teleNumber,
+      userType: app.data.userType
+    })
     switch(app.data.userType){
       case 'dy':{
         that.setData({userType: '导游',});
@@ -103,7 +126,7 @@ Page({
 
   service:function(){
     var app = getApp()
-    if(app.data.judge == false){
+    if(app.data.judge == '无'){
       wx.showToast({
         title: '请先登录！',
         duration: 3000
@@ -122,20 +145,25 @@ Page({
   },
 
   out: function(){
-    if (app.data.judge == false)
-    {
-      wx.showToast({
-        title: '您还没有登录!',
-      })
-    }else{
       app.data.userName = '请登录或注册';
       app.data.teleNumber = '空';
+      app.data.userType = '无';
       app.data.judge = false;
-      app.data.userType = '请登录或注册';
-      wx.showToast({
-        title: '重启页面生效!',
+      wx.removeStorage({
+        key: 'name',
+      });
+      wx.removeStorage({
+        key: 'telephone',
+      });
+      wx.removeStorage({
+        key: 'type',
+      });
+      wx.removeStorage({
+        key: 'judge',
+      });
+      wx.reLaunch({
+        url: 'index2'
       })
-    }
   },
 
   //clear
@@ -187,9 +215,13 @@ Page({
     })
   },
 
-  police:function(){
-    wx.makePhoneCall({
-      phoneNumber: '110',
+  scan:function(){
+    wx.scanCode({
+      success: (res) => {
+        wx.navigateTo({
+          url: res.result,
+        })
+      }
     })
-  }
+  },
 })

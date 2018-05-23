@@ -18,7 +18,7 @@ Page({
   tap(e) {
     if (e.target.dataset.title === '意识丧失' && e.target.dataset.type === '应急'){
       wx.navigateTo({
-        url: '../isBreath/isBreath',
+        url: '../breathe/breathe',
       });
     }
     if (e.target.dataset.title === '烧烫伤' && e.target.dataset.type === '应急'){

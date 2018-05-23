@@ -69,7 +69,6 @@ Page({
             radius: 1000,
             strokeWidth: 1
           }]
-
         })
       }
 

@@ -1,4 +1,4 @@
-const apiURL = 'http://api.breadtrip.com';
+const apiURL = 'https://api.breadtrip.com';
 
 const wxRequest = (params, url) => {
   wx.request({

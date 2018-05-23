@@ -51,4 +51,5 @@
       <button type="primary" size="default" style="background-color: #4abdcc;" formType="submit">提交</button>
     </view>
   </form>
+  <button type="primary" size="default" style="background-color: #4abdcc;" bindtap='link'>查看已发起的活动</button>
 </view>

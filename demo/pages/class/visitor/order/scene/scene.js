@@ -13,6 +13,7 @@ Page({
   //事件处理函数
   bindTextTap: function(e) {
     var id = e.currentTarget.dataset.id;
+    console.log('test'+e.currentTarget.dataset.id);
     console.log(id);
     wx.navigateTo({
       url: '../detail/detail?id='+id

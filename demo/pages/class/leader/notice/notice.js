@@ -16,8 +16,8 @@ Page( {
   data: {
     formMsgHidden: true,
     disableBtn: false,
-    types: ["运动","竞赛","电影","音乐","其他"],
-    typeIndex: "0",
+    types: ["参观","互动","推广","自由活动","其他"],
+    typeIndex: '0',
     address: '点击选择位置',
     longitude: 0, //经度
     latitude: 0,//纬度
@@ -33,7 +33,7 @@ Page( {
   submitForm: function (e) {
     var that = this;
     console.log(e);
-    if (e.detail.value.content == '' || e.detail.value.time == '' || e.detail.value.typeIndex == '0' || e.detail.value.title == '' || that.data.address == ''){
+    if (e.detail.value.content == '' || e.detail.value.time == '' || e.detail.value.typeIndex == '' || e.detail.value.title == '' || that.data.address == ''){
       wx.showToast({
         title: '请完善活动信息',
         duration: 3000,
@@ -44,7 +44,7 @@ Page( {
       var time = util.formatTime(new Date());
       console.log(e.detail.value.title);
       console.log(e.detail.value.typeIndex);
-      var value = e.detail.value.time + "@" + that.data.address + "@" + e.detail.value.content + "@" + that.data.longitude + "@" + that.data.latitude;
+      var value = e.detail.value.time + "@" + that.data.address + "@" + e.detail.value.content + "@" + that.data.longitude + "@" + that.data.latitude + "@" + e.detail.value.typeIndex;
       console.log(value);
       wx.request({
         url: 'https://api.wxappclub.com/put',
@@ -52,7 +52,7 @@ Page( {
           appkey: 'f7kez180klzuhm1w4ewnmjjzc7wwzjb1',
           key: e.detail.value.title,
           value: value,
-          type: e.detail.value.typeIndex
+          type: 'default'
         },
         header: {
           'Content-Type': 'application/json'
@@ -123,6 +123,12 @@ Page( {
       content: value, noteNowLen: len
     })
   },
+
+  link:function(){
+    wx.navigateTo({
+      url: '../../visitor/plan/plan',
+    })
+  }
 
 })
 

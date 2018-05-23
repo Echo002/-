@@ -18,6 +18,7 @@ Page({
       url: '../order/order',
     })
   },
+
   tools:function(){
     wx.navigateTo({
       url: '../tools/tools',
@@ -33,6 +34,12 @@ Page({
   save:function(){
     wx.navigateTo({
       url: '../../save/tutorial/tutorial',
+    })
+  },
+
+  advice:function(){
+    wx.navigateTo({
+      url: '../advice/advice',
     })
   }
 })

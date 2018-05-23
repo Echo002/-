@@ -72,5 +72,11 @@ Page({
     wx.navigateTo({
       url: '../../save/tutorial/tutorial',
     })
+  },
+
+  feedback: function(){
+    wx.navigateTo({
+      url: '../feedback/feedback',
+    })
   }
 })

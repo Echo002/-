@@ -47,8 +47,9 @@
   </modal>
 </view>
 
-<view class="item" bindtap="police">
+<view class="item" bindtap="scan">
     <image class="item-image" src="../../images/index2/radio128.png"/>
-    <text class="item-name">一键报警</text> 
+    <text class="item-name">扫一扫</text> 
     <image class="right-image" src="../../images/index2/right.png"/>
-  </view>
+</view>
+

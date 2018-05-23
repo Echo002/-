@@ -1,0 +1,8 @@
+<form bindsubmit="formSubmit" report-submit>
+  <view class="layout-column marUpTop">
+    <textarea class="desc border" placeholder="你对导游的服务有什么意见或者是更好的建议吗？欢迎来吐槽！(不要超过1000字哦）" name="content" maxlength="1000"/>
+    <view class="marTop border">
+      <button type="primary" size="default" style="background-color: #4abdcc;" formType="submit" disabled='{{disableBtn}}'>提交</button>
+    </view>
+  </view>
+</form>

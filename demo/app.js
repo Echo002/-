@@ -25,7 +25,8 @@ App({
           "jp": "香港ドル",
           "ko": "홍콩 달러"
       }
-    })
+    });
+
     // 展示本地存储能力
     var logs = wx.getStorageSync('logs') || []
     logs.unshift(Date.now())
@@ -38,13 +39,14 @@ App({
   },
   
   globalData: {
+    
   },
   
   data:{
     userName:'用户名空',
     teleNumber: '请登录或注册',
+    userType: '用户类别空',
     judge:false,
-    userType: '无',
     condition: true,  //判断按钮的显示
     isCleaned: false
   }

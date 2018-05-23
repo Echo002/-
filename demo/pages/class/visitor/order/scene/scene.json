@@ -1,1 +1,6 @@
-{}
+{
+  "navigationBarBackgroundColor": "#FFF",
+  "backgroundTextStyle": "light",
+  "navigationBarTitleText": "导览目录",
+  "navigationBarTextStyle": "black"
+}

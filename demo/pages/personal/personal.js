@@ -78,6 +78,22 @@ Page({
                 app.data.userType = that.data.userType;
                 app.data.userName = that.data.userName;
                 app.data.teleNumber = that.data.teleNumber;
+                wx.setStorage({
+                  key: "name",
+                  data: app.data.userName
+                });
+                wx.setStorage({
+                  key: "telephone",
+                  data: app.data.teleNumber
+                });
+                wx.setStorage({
+                  key: "type",
+                  data: app.data.userType
+                });
+                wx.setStorage({
+                  key: "judge",
+                  data: app.data.judge
+                });
                 /*console.log(that.data.userName);
                 console.log(app.data.userName);
                 console.log(app.data.teleNumber);*/

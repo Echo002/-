@@ -1,0 +1,12 @@
+<!--pages/class/leader/operate/operate.wxml-->
+<view class="container">
+  <view class="news-item-container">
+  <text class="sub-title">获取到了{{num}}个投诉建议</text>
+      <view class="news-item" wx:for="{{list}}" bindtap='actionSheetTap' data-reply-phone='{{item.value}}' data-userName='{{item.key}}'>
+          <text>用户：{{item.key}}
+                内容：{{item.content}}
+                发表时间：{{item.time}}
+          </text>
+      </view>
+  </view> 
+</view>

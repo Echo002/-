@@ -208,7 +208,8 @@ Page({
         header: {  
                 },  
         method: "GET",  
-        success: function( res ) {                                   
+        success: function( res ) {
+          console.log(res);                                
           selectCru.rate=res.data.rate.toFixed(2);  
           selectCru.amount=res.data.amount.toFixed(2);  
           oldMySelectCurs=[selectCru].concat(oldMySelectCurs);

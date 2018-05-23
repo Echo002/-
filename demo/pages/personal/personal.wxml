@@ -15,7 +15,7 @@
 
     <view class="from-list">
       <view class="section">
-    <input class="type" type="text" bindinput="userteleNumberInput" placeholder="请输入您的电话号码" placeholder-class='placeholders'/>
+    <input class="type" type="number" bindinput="userteleNumberInput" placeholder="请输入您的电话号码" placeholder-class='placeholders'/>
       </view>
     </view>
 

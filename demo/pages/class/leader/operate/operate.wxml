@@ -2,8 +2,12 @@
 <view class="container">
   <view class="news-item-container">
   <text class="sub-title">已经登记的游客 共计{{num}}个</text>
-      <view class="news-item" wx:for="{{list}}" bindtap='call' data-reply-phone='{{item.value}}'>
+      <view class="news-item" wx:for="{{list}}" bindtap='actionSheetTap' data-reply-phone='{{item.value}}' data-userName='{{item.key}}'>
           <text>姓名：{{item.key}}\n电话：{{item.value}}</text>
       </view>
-  </view>  
+  </view> 
+
+  <modal hidden="{{DeleteHidden}}" title="警告" confirm-text="确认" bindcancel="cancel" bindconfirm="delete">
+确定删除该用户吗？
+  </modal> 
 </view>
