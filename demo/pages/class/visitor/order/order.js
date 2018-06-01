@@ -24,10 +24,11 @@ Page({
           list: data.data
         })
       },
-      fail: function () {
+      fail: function (e) {
         wx.showLoading({
-          title: '数据加载错误，请刷新再试！'
+          title: '加载失败!'
         })
+        console.log(e)
       }
     });
   },
