@@ -1,7 +1,7 @@
 Page({
   data: {
     Height: 0,
-    scale: 16,
+    scale: 18,
     latitude: "",
     longitude: "",
     markers: [],
@@ -29,7 +29,6 @@ Page({
     }
     ],
     circles: []
-
   },
 
   onLoad: function () {
@@ -47,7 +46,7 @@ Page({
     })
 
     wx.getLocation({
-      type: 'wgs84', 
+      type: 'gcj02', 
       success: function (res) {
         that.setData({
           latitude: res.latitude,
@@ -66,15 +65,12 @@ Page({
             longitude: res.longitude,
             color: '#FF0000DD',
             fillColor: '#7cb5ec88',
-            radius: 1000,
+            radius: 200,
             strokeWidth: 1
           }]
-
         })
       }
-
     })
-
   },
 
   regionchange(e) {
